@@ -1,6 +1,6 @@
 # Group-10
 
-## Project
+## Project: NERD Words
 
 
 ## Purpose

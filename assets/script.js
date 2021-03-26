@@ -1,4 +1,7 @@
 // Functioning Word API
+let click = document.getElementById("action")
+
+let getWord = function() {
 fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
 	"method": "GET",
 	"headers": {
@@ -8,11 +11,23 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
 })
 .then(function(response){
     response.json().then(function(data){
-       
-      console.log(data)
+    //   console.log(data)
+      let word = data[0].word
+    //   console.log(word)
+      let appear = document.getElementById("word")
+      appear.innerHTML = word
+
         
+       setTimeout(function() {
+           document.getElementById("word").remove()
+       }, 3000)
+
   })
  })
 .catch(err => {
 	console.error(err);
 });
+};
+
+
+click.addEventListener("click", getWord)

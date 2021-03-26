@@ -1,16 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nerd Words</title>
-</head>
-<body>
-<div class="search">
-    <input id="search" class="search" type="text" placeholder="Enter Word">
-    <button id="action" class="btn btn-primary">Search</button>
-</div>
-<script src="assets/script.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nerd Words</title>
+		<link
+			href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body>
+		<!--Navigation bar with timer-->
+		<nav class="navbar navbar-light bg-dark">
+			<a href="#" id="highscores-bar" class="navbar-text text-light"
+				>High Scores</a
+			>
+			<span class="navbar-text text-light"
+				>Time: <span id="timer">0</span></span
+			>
+		</nav>
+
+		<!-- Coding quiz container with start button -->
+		<div id="container" class="start-page">
+			<span id="title" class="h1">Nerd Game</span>
+			<p id="text">
+				A word will pop up for a second for you to see and remember. You will
+				have to spell the word in the input field correctly to get a point for
+				the game.
+				<br />
+				Are you ready?
+			</p>
+			<button aria-label="start-game" id="start-button" class="button">
+				Start Game
+			</button>
+
+			<!-- div for word input -->
+			<div id="word-input">
+				<input class="answer-field"></input>
+        <button>Submit</button>
+			</div>
+
+			<!-- div for initials-->
+			<div id="input-field">
+				<label for="initials">Enter initials:</label>
+				<input type="text" name="initials" id="initials" />
+				<button id="submit-button">Submit</button>
+			</div>
+
+			<div id="answer-message"></div>
+		</div>
+
+		<div class="search">
+			<input id="search" class="search" type="text" placeholder="Enter Word" />
+			<button id="action" class="btn btn-primary">Search</button>
+		</div>
+
+		<script src="assets/script.js"></script>
+	</body>
 </html>

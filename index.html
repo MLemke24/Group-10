@@ -1,62 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Nerd Words</title>
-		<link
-			href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-			rel="stylesheet"
-		/>
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>The short attention spanned Game</title> -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <!-- Tail winds -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+ 
+</head>
+<body>
 
-	<body>
-		<!--Navigation bar with timer-->
-		<nav class="navbar navbar-light bg-dark">
-			<a href="#" id="highscores-bar" class="navbar-text text-light">
-                High Scores
-                </a>
-			<span class="navbar-text text-light"
-				>Time: <span id="timer">0</span></span
-			>
-		</nav>
+    <h1 class="text-4x1 font-bold text-center text-red-600">The short attention spanned game</h1>
+    <!-- start Game button -->
+    <div class="start_btn"><button>Start Game</button></div>
 
-		<!-- Coding quiz container with start button -->
-		<div id="container" class="start-page">
-			<span id="title" class="h1">Nerd Game</span>
-			<p id="text">
-				A word will pop up for a second for you to see and remember. You will
-				have to spell the word in the input field correctly to get a point for
-				the game.
-				<br />
-				Are you ready?
-			</p>
-			<button aria-label="start-game" id="start-button" class="button">
-				Start Game
-			</button>
+    <!-- Info Box -->
+    <div class="info_box">
+        <div class="info-title"><span>Game Rules</span></div>
+        <div class="info-list">
+            <div class="info">1. You will have only <span>5 seconds</span> to read and remember the word.</div>
+            <div class="info">2. If you spelled the word correctly, you get 1 point.</div>
+            <div class="info">3. If you spelled it wrong, take a shot.</div>
+            <div class="info">4. You have to spell all the words in order to finish the game</div>
+    
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Game</button>
+            <button class="restart">Continue</button>
+        </div>
+    </div>
 
-			<!-- div for word input -->
-			<div id="word-input">
-				<input class="answer-field"></input>
-        <button>Submit</button>
-			</div>
+    <!-- Game Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">the Memory test game</div>
+            <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">5</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="word_text">
+                <!-- Here we would insert the word to be displayed  -->
+            </div>
+            
+        </section>
 
-			<!-- div for initials-->
-			<div id="input-field">
-				<label for="initials">Enter initials:</label>
-				<input type="text" name="initials" id="initials" />
-				<button id="submit-button">Submit</button>
-			</div>
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Here I've inserted Question Count Number from JavaScript -->
+            </div>
+            <button class="next_btn">Next word</button>
+        </footer>
+    </div>
 
-			<div id="answer-message"></div>
-		</div>
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">Game Over!</div>
+        <div class="score_text">
+            <!-- Here I've inserted Score Result from JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Play Again</button>
+            <button class="quit">Quit Game</button>
+        </div>
+    </div>
 
-		<div class="search">
-			<input id="search" class="search" type="text" placeholder="Enter Word" />
-			<button id="action" class="btn btn-primary">Search</button>
-		</div>
+    
 
-		<script src="assets/script.js"></script>
-	</body>
+    
+     <script src="./assets/script.js"></script>
+
+</body>
 </html>
+

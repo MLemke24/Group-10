@@ -16,7 +16,7 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
     //   console.log(word)
       let appear = document.getElementById("word")
       appear.innerHTML = word
-    
+
         
        setTimeout(function() {
            document.getElementById("word").remove()

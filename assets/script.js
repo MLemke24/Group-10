@@ -18,22 +18,24 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
       time = 5;
 
       timer = setInterval (function function1() {
-        document.getElementById("timer_sec").innerHTML = time + "&nbsp";
+  
+        document.getElementById("timer_sec").innerHTML = "Your word will appear in: " + time + "&nbsp";
         console.log(time)
         time -= 1
         if(time < 0 ) {
           clearInterval(timer)
-          document.getElementById("timer_sec").remove()
+          document.getElementById("timer_sec").innerHTML = ""
           word = data[0].word
-          console.log(word)
+          // console.log(word)
+        
          
-          appear = document.getElementById("word")
+        appear = document.getElementById("word")
         //  console.log(appear)
         appear.innerHTML = word
-        // submitWord(word)
+       
 
          setTimeout(function() {
-             document.getElementById("word").remove()
+             document.getElementById("word").innerHTML = ""
              
            
          }, 1000)
@@ -49,8 +51,8 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
 document.getElementById("btn").onclick = function(event) {
   
   let results = document.getElementById("spell").value
-  console.log(results)
- console.log(word)
+//   console.log(results)
+//  console.log(word)
   if (word === results){
     alert(" this is a test to see if this works! Add a point")
   } else {

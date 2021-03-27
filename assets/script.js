@@ -3,7 +3,7 @@ let word, appear, time
 // Functioning Word API
 let click = document.getElementById("action")
 
-let submit = document.getElementById("btn")
+// let submit = document.getElementById("btn")
 
 let getWord = function() {
 fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
@@ -30,11 +30,11 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
           appear = document.getElementById("word")
         //  console.log(appear)
         appear.innerHTML = word
-        
+        // submitWord(word)
 
          setTimeout(function() {
              document.getElementById("word").remove()
-             submitWord(word)
+             
            
          }, 1000)
         }
@@ -46,17 +46,19 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
 });
 };
 
-let submitWord = function(event, word) {
+document.getElementById("btn").onclick = function(event) {
   
   let results = document.getElementById("spell").value
   console.log(results)
  console.log(word)
-  if (getWord === results){
+  if (word === results){
     alert(" this is a test to see if this works! Add a point")
-  } 
+  } else {
+    alert("this is just a test You suck")
+  }
 
 }
 
 click.addEventListener("click", getWord)
 
-submit.addEventListener("click", submitWord)
+// submit.addEventListener("click", submitWord)

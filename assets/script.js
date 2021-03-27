@@ -1,5 +1,9 @@
+let word, appear, time
+
 // Functioning Word API
 let click = document.getElementById("action")
+
+let submit = document.getElementById("btn")
 
 let getWord = function() {
 fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
@@ -11,17 +15,30 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
 })
 .then(function(response){
     response.json().then(function(data){
-    //   console.log(data)
-      let word = data[0].word
-    //   console.log(word)
-      let appear = document.getElementById("word")
-      appear.innerHTML = word
+      time = 5;
 
+      timer = setInterval (function function1() {
+        document.getElementById("timer_sec").innerHTML = time + "&nbsp";
+        console.log(time)
+        time -= 1
+        if(time < 0 ) {
+          clearInterval(timer)
+          document.getElementById("timer_sec").remove()
+          word = data[0].word
+          console.log(word)
+         
+          appear = document.getElementById("word")
+        //  console.log(appear)
+        appear.innerHTML = word
         
-       setTimeout(function() {
-           document.getElementById("word").remove()
-       }, 3000)
 
+         setTimeout(function() {
+             document.getElementById("word").remove()
+             submitWord(word)
+           
+         }, 1000)
+        }
+      }, 1000)
   })
  })
 .catch(err => {
@@ -29,5 +46,17 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
 });
 };
 
+let submitWord = function(event, word) {
+  
+  let results = document.getElementById("spell").value
+  console.log(results)
+ console.log(word)
+  if (getWord === results){
+    alert(" this is a test to see if this works! Add a point")
+  } 
+
+}
 
 click.addEventListener("click", getWord)
+
+submit.addEventListener("click", submitWord)

@@ -14,6 +14,7 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
 	}
 })
 .then(function(response){
+    console.log('RESPONSE HAPPENING first fetch')
     response.json().then(function(data){
       time = 5;
 
@@ -59,21 +60,47 @@ document.getElementById("btn").onclick = function(event) {
 //   console.log(results)
 //  console.log(word)
   if (word === results){
+      console.log('WE R IN THE IF!!!')
 
-    fetch("https://ronreiter-meme-generator.p.rapidapi.com/meme?meme=Condescending-Wonka&bottom=Bottom%20Text&top=Top%20Text&font_size=50&font=Impact", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "d8002eed6bmsh7f05bd1fa3ad782p18b85cjsnc8a6a8a71b69",
-		"x-rapidapi-host": "ronreiter-meme-generator.p.rapidapi.com"
-	}
+      const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://giphy.p.rapidapi.com/v1/gifs/search?api_key=33awPwF4gZQMEcMG6udPnLDeOiylsMLV&q=funny%20cat",
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-key": "d8002eed6bmsh7f05bd1fa3ad782p18b85cjsnc8a6a8a71b69",
+            "x-rapidapi-host": "giphy.p.rapidapi.com"
+        }
+    };
+    
+    $.ajax(settings).done(function (response) {
+        console.log('GIFY!!!!',response.data[0].images.original.url);
+        var img = $('<img>')
+        img.attr('src', response.data[0].images.original.url)
+        $('#gamebox').append(img)
+    });
+
+    // fetch("https://ronreiter-meme-generator.p.rapidapi.com/meme?meme=Condescending-Wonka&bottom=Bottom%20Text&top=Top%20Text&font_size=50&font=Impact", {
+    //     "method": "GET",
+    //     "headers": {
+    //         "x-rapidapi-key": "d8002eed6bmsh7f05bd1fa3ad782p18b85cjsnc8a6a8a71b69",
+    //         "x-rapidapi-host": "ronreiter-meme-generator.p.rapidapi.com"
+    //     }
+    // }).then(res => {
+    //     console.log('REs!!!!!', res)
+    //     return res.body.json()
+    // }).then(res => {
+    //         console.log('dataaa coming back form fetch', res)
     
 
       
-    alert(" this is a test to see if this works! Add a point")
-  } else {
-    alert("this is just a test You suck")
-  }
+    //             alert(" this is a test to see if this works! Add a point")
+           
 
+    //     })
+} else {
+    alert("this is just a test You suck")
+}
 }
 
 click.addEventListener("click", getWord)

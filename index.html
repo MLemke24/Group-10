@@ -6,127 +6,107 @@
     <!-- <title>The short attention spanned Game</title> -->
     <link rel="stylesheet" href="./assets/style.css">
     <!-- Tail winds -->
+		<title>Memory Game</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
  
 </head>
 
 <body>
+  <!-- Navbar starts-->
+  <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        <img src="assets/group-10-logo.png" alt="site logo" style="max-height: 90px">
+        <h1 class="title is-2 has-text-grey-lighter">Memory Game</h1>
+      </a>
+    </div>
+    <div class="navbar-menu" id="nav-links">
+      <div class="navbar-end">
+        <a class="navbar-item is-light title is-4 has-text-grey-lighter" id="highscores">View Highscores</a>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar ends-->
 
-        <header >
-            <button class="bg-blue-900 hover:bg-blue-700 text-white font-bold py-6 px-9 rectangle absolute top-0 right-0 " id="highscores">
-                View Hiscore
-              </button>
-        </header>
-        
+  <!-- Front page or page 1-->
+  <div class="page-1">
+    <article class="message">
+      <div class="message-header">
+        <h2>Rules</h2>
+      </div>
+      <div class="message-body">
+        <div class="info-list">
+          <div class="info">1. You will have only <span>5 seconds</span> to read and remember the word.</div>
+          <div class="info">2. If you spelled the word correctly, you get 1 point.</div>
+          <div class="info">3. If you spelled it wrong, take a shot.</div>
+          <div class="info">4. You have to spell all the words in order to finish the game</div>
+      </div>
+    </article>
 
-<!-- Log Scores Page-->
-<div id="log" class="log">
+    <div class="has-text-centered">
+      <p class="is-danger">Are You Ready?</p>
+      <br>
+      <button id="action" class="start-game button is-link is-hovered">Start Game</button>
+    </div>
+  </div>       
+
+  <!-- Countdown box on page 2-->
+  <div class="timer-div">
+
+  </div>
+
+  <!-- Game Box -->
+  <div class="input-word-section has-text-centered">
+    <div class="quiz_box" id="gamebox" >
+      <div class="timer"></div>
+      <div class="time-left">Time Left</div>
+      <div id="timer_sec" class="timer_sec"></div>
+    </div>
+    
+    <div class="time_line"></div>
+
+    <section> 
+      <div id="word" class="word"></div>
+      <input id="spell" class="spell" placeholder="Enter Word Here">
+      <button id="btn" class="btn btn-primary button is-success">Enter</button>
+    </section>
+  </div>
+
+  <!-- Log Scores Page-->
+  <div id="log" class="log has-text-centered">
     <div class="score">
-        <h2 id="score">Your Score:</h2>
+      <h2 id="score">Your Score:</h2>
     </div>
 
     <div class="highScore">
-        <h3 id="highScore"></h3>
+      <h3 id="highScore"></h3>
     </div>
+    
     <div class="enter">
         <label></label>
         <input type="text" placeholder="Your Initials" name="initials" id="initials">
     </div>
+    
     <div class="choices">
-    <button id="save" class="save">
-        Save
-    </button>
-    <button id="try" class="try">
-        Try Again
-    </button>
+      <button id="save" class="save button is-primary">Save</button>
+      <button id="try" class="try button is-light is-info">Try Again</button>
+    </div>
+  </div>
 
-    <!-- Highscores page-->
-<div id="finale" class="finale">
+  <!-- Highscores page-->
+  <div id="finale" class="finale has-text-centered">
     <div class="yourBest">
-        <h2 id="yourBest">Your Scores</h2>
+      <h2 id="yourBest">Your Scores</h2>
     </div>
     <div>
-        <ul id="finalLog" class="finalLog">
-
-        </ul>
-   </div>
-</div>
-</div>
-        
-
-    
-    <!-- start Game button -->
-    
-
-    <!-- Info Box -->
-    <!-- <div class="info_box">
-        <div class="info-title">
-            <span>Game Rules</span>
-        </div>
-        <div class="info-list">
-            <div class="info">1. You will have only <span>5 seconds</span> to read and remember the word.</div>
-            <div class="info">2. If you spelled the word correctly, you get 1 point.</div>
-            <div class="info">3. If you spelled it wrong, take a shot.</div>
-            <div class="info">4. You have to spell all the words in order to finish the game</div> -->
-    
-        </div>
-        <div class="buttons">
-            <button id="action" class="start-game">Start Game</button>
-            <button id="button" class="quit">Exit Game</button>
-            <button id="button" class="restart">Continue</button>
-        </div>
+      <ul id="finalLog" class="finalLog">
+      </ul>
     </div>
+  </div>
 
-    <!-- Game Box -->
-    <div class="quiz_box" id="gamebox" >
-        <header>
-            <div class="title">the Memory test game</div>
-            <div class="timer">
-                <div class="time-left">Time Left</div>
-                <div id="timer_sec" class="timer_sec">
 
-                </div>
-            </div>
-            <div class="time_line"></div>
-        </header>
-        <section>
-            <div id="word" class="word">
-                
-            </div>
-            <input id="spell" class="spell" placeholder="Enter Word Here">
-            <button id="btn" class="btn btn-primary">Enter</button>
-            
-        </section>
 
-        <!-- footer of Quiz Box -->
-        <!-- <footer>
-            <div class="total_que">
-               
-            </div>
-            <button class="next_btn">Next word</button>
-        </footer>
-    </div> -->
-
-    <!-- Result Box -->
-     <!-- <div class="result_box">
-        <div class="icon">
-            <i class="fas fa-crown"></i>
-        </div>
-        <div class="complete_text">Game Over!</div>
-        <div class="score_text"> -->
-            <!--Here I've inserted Score Result from JavaScript-->  
-        <!-- </div>
-        <div class="buttons">
-            <button class="restart">Play Again</button>
-            <button class="quit">Quit Game</button>
-        </div>
-    </div>  -->
-
-    
-
-    
-     <script src="./assets/script.js"></script>
-
+	<script src="./assets/script.js"></script>
 </body>
 </html>

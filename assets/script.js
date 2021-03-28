@@ -26,7 +26,7 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
           clearInterval(timer)
           document.getElementById("timer_sec").innerHTML = ""
           word = data[0].word
-          // console.log(word)
+          console.log(word)
         
          
         appear = document.getElementById("word")
@@ -60,22 +60,37 @@ document.getElementById("btn").onclick = function(event) {
 //  console.log(word)
   if (word === results){
 
-    fetch("https://ronreiter-meme-generator.p.rapidapi.com/meme?meme=Condescending-Wonka&bottom=Bottom%20Text&top=Top%20Text&font_size=50&font=Impact", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "d8002eed6bmsh7f05bd1fa3ad782p18b85cjsnc8a6a8a71b69",
-		"x-rapidapi-host": "ronreiter-meme-generator.p.rapidapi.com"
+    fetch(
+      'https://api.giphy.com/v1/gifs/random?api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN'
+    )
+      // Convert the response to JSON
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(response) {
+        console.log(response)
+        // // Use 'querySelector' to get the ID of where the GIF will be displayed
+        var showGiphy = document.querySelector('#response-container');
+        // // Create an '<img>' element
+        // var gifImg = document.createElement('img');
+        // // Set that element's 'src' attribute to the 'image_url' from our Giphy API response
+        // gifImg.setAttribute('src', response.data.image_url);
+        // // Append the '<img>' element to the page
+        // showGiphy.appendChild(gifImg);
+      });
+    
+      
+    
 	}
     
-
-      
-    alert(" this is a test to see if this works! Add a point")
-  } else {
-    alert("this is just a test You suck")
-  }
-
 }
+  
+
 
 click.addEventListener("click", getWord)
 
-// submit.addEventListener("click", submitWord)
+// fetch("https://ronreiter-meme-generator.p.rapidapi.com/meme?meme=Condescending-Wonka&bottom=Bottom%20Text&top=Top%20Text&font_size=50&font=Impact", {
+// 	"method": "GET",
+// 	"headers": {
+// 		"x-rapidapi-key": "d8002eed6bmsh7f05bd1fa3ad782p18b85cjsnc8a6a8a71b69",
+// 		"x-rapidapi-host": "ronreiter-meme-generator.p.rapidapi.com"

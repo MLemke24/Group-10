@@ -48,12 +48,27 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
 });
 };
 
+
+
+
+
+
 document.getElementById("btn").onclick = function(event) {
   
   let results = document.getElementById("spell").value
 //   console.log(results)
 //  console.log(word)
   if (word === results){
+
+    fetch("https://ronreiter-meme-generator.p.rapidapi.com/meme?meme=Condescending-Wonka&bottom=Bottom%20Text&top=Top%20Text&font_size=50&font=Impact", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "d8002eed6bmsh7f05bd1fa3ad782p18b85cjsnc8a6a8a71b69",
+		"x-rapidapi-host": "ronreiter-meme-generator.p.rapidapi.com"
+	}
+    
+
+      
     alert(" this is a test to see if this works! Add a point")
   } else {
     alert("this is just a test You suck")

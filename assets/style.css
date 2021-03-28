@@ -10,3 +10,10 @@
     height: 500px;
     text-align: center;
 }
+
+.enter-box {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+}
+ 

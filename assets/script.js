@@ -2,8 +2,14 @@ let word, appear, time
 
 // Functioning Word API
 let click = document.getElementById("action")
+// let next = document.getElementById("action")
 
-// let submit = document.getElementById("btn")
+
+document.getElementById("next-btn").onclick = function(){
+document.getElementById("word").innerHTML = ""
+document.getElementById("spell").innerHTML = ""
+getWord()
+}
 
 let getWord = function() {
 fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
@@ -49,13 +55,10 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
 };
 
 
-
-
-
-
-document.getElementById("btn").onclick = function(event) {
+document.getElementById("main-btn").onclick = function(event) {
   
   let results = document.getElementById("spell").value
+
 //   console.log(results)
 //  console.log(word)
   if (word === results){
@@ -69,28 +72,28 @@ document.getElementById("btn").onclick = function(event) {
       })
       .then(function(response) {
         console.log(response)
-        // // Use 'querySelector' to get the ID of where the GIF will be displayed
-        var showGiphy = document.querySelector('#response-container');
-        // // Create an '<img>' element
-        // var gifImg = document.createElement('img');
-        // // Set that element's 'src' attribute to the 'image_url' from our Giphy API response
-        // gifImg.setAttribute('src', response.data.image_url);
-        // // Append the '<img>' element to the page
-        // showGiphy.appendChild(gifImg);
+        let grabGiphy = document.getElementById("word")
+
+        var setGif = document.createElement("img")
+        setGif.setAttribute('src', response.data.image_url)
+        grabGiphy.appendChild(setGif)
+        
       });
     
       
     
-	}
+	} else {
+     let getX = document.getElementById("word")
+
+     let setX = document.createElement("span")
+     setX.setAttribute("style", 'font-size:100px;')
+     setX.innerHTML = '&#10060'
+     getX.appendChild(setX)
+  }
     
 }
   
 
-
+// next.addEventListener("click", getWord)
 click.addEventListener("click", getWord)
 
-// fetch("https://ronreiter-meme-generator.p.rapidapi.com/meme?meme=Condescending-Wonka&bottom=Bottom%20Text&top=Top%20Text&font_size=50&font=Impact", {
-// 	"method": "GET",
-// 	"headers": {
-// 		"x-rapidapi-key": "d8002eed6bmsh7f05bd1fa3ad782p18b85cjsnc8a6a8a71b69",
-// 		"x-rapidapi-host": "ronreiter-meme-generator.p.rapidapi.com"

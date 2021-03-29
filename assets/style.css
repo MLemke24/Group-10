@@ -11,9 +11,61 @@
     text-align: center;
 }
 
+#next-btn{
+        justify-content: bottom;
+        border: none;
+        padding: 10px 20px;
+        font-size: 24px;
+        font-weight: bold;
+        border-radius: 10px;
+        margin: 40px 20px;
+}
+
 .enter-box {
     display: flex;
     justify-content: center;
     align-content: flex-end;
 }
  
+#giphy {
+    align-items: center;
+    margin: 0;
+    display: inline;
+    width: 160px;
+    height: 180px;
+}
+
+.time-left {
+    font-size: 25px;
+    font-weight: bolder;
+    color: blueviolet;
+}
+
+.score-keeper {
+    text-align: center;
+    margin: 10px, 200px;
+    font-size: 25px;
+    font-weight: bolder;
+    color: black;
+}
+
+#learn {
+     font-size: 15px;
+     font-weight: bolder;
+
+}
+
+#timer_sec {
+    text-align: center;
+    margin: 10px, 200px;
+    font-size: 25px;
+    font-weight: bolder;
+    color: black;
+}
+
+#word {
+    font-size: 35px;
+    font-weight: bolder;
+    color:blueviolet;
+    
+}

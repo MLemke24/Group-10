@@ -1,4 +1,4 @@
-let word, appear, time
+let word, definition, pronunciation, appear, time
 
 // Functioning Word API
 let click = document.getElementById("action")
@@ -7,7 +7,8 @@ let click = document.getElementById("action")
 
 document.getElementById("next-btn").onclick = function(){
 document.getElementById("word").innerHTML = ""
-document.getElementById("spell").innerHTML = ""
+document.getElementById("definition").innerHTML = ""
+document.getElementById("spell").value = ""
 getWord()
 }
 
@@ -21,6 +22,7 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
 })
 .then(function(response){
     response.json().then(function(data){
+      console.log(data)
       time = 5;
 
       timer = setInterval (function function1() {
@@ -32,6 +34,8 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
           clearInterval(timer)
           document.getElementById("timer_sec").innerHTML = ""
           word = data[0].word
+          definition = data[0].definition
+          pronunciation = data[0].pronunciation
           console.log(word)
         
          
@@ -76,8 +80,19 @@ document.getElementById("main-btn").onclick = function(event) {
 
         var setGif = document.createElement("img")
         setGif.setAttribute('src', response.data.image_url)
+        setGif.setAttribute('id', 'giphy')
         grabGiphy.appendChild(setGif)
-        
+
+        let grabDefinition = document.getElementById("definition")
+
+        let setDefinition = `
+        <h3 id="learn"> Word: ${word} </h3>
+        <p id="learn"> Definition: ${definition}</p>
+        <p id="learn"> Pronunciation: ${pronunciation}</p>
+        `
+        grabDefinition.innerHTML = setDefinition
+       console.log(definition)
+       console.log(pronunciation)
       });
     
       
@@ -89,6 +104,15 @@ document.getElementById("main-btn").onclick = function(event) {
      setX.setAttribute("style", 'font-size:100px;')
      setX.innerHTML = '&#10060'
      getX.appendChild(setX)
+
+     let grabDefinition = document.getElementById("definition")
+
+        let setDefinition = `
+        <h3 id="learn"> Word: ${word} </h3>
+        <p id="learn"> Definition: ${definition}</p>
+        <p id="learn"> Pronunciation: ${pronunciation}</p>
+        `
+        grabDefinition.innerHTML = setDefinition
   }
     
 }

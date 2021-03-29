@@ -57,22 +57,22 @@
   </div>
 
   <!-- Game Box -->
+  <section> 
   <div class="input-word-section has-text-centered">
     <div class="quiz_box" id="gamebox" >
       <div class="timer"></div>
       <div class="time-left">Time Left</div>
       <div id="timer_sec" class="timer_sec"></div>
-    </div>
-    
-    <div class="time_line"></div>
-
-    <section> 
       <div id="word" class="word"></div>
+        
+      <div class="enter-box" id="enter-box">
       <input id="spell" class="spell" placeholder="Enter Word Here">
-      <button id="btn" class="btn btn-primary button is-success">Enter</button>
-    </section>
+      <button id="main-btn" class="btn btn-primary button is-success">Enter</button>
+     </div>
+    </div>
+    <button id="next-btn" class="btn btn-primary button is-success">Next Word</button>
   </div>
-
+</section>
   <!-- Log Scores Page-->
   <div id="log" class="log has-text-centered">
     <div class="score">
@@ -104,7 +104,6 @@
       </ul>
     </div>
   </div>
-
 
 
 	<script src="./assets/script.js"></script>

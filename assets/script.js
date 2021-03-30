@@ -1,20 +1,23 @@
+
 var save = document.querySelector(".save")
 var highscorePage = document.querySelector(".highscores")
 var log = document.querySelector(".finalLog")
 
-let word, appear, time
+let word, definition, pronunciation, appear, time, createCircle
+
 
 let userScore = 0;
 
 
 // Functioning Word API
 let click = document.getElementById("action")
-// let next = document.getElementById("action")
 
+// document.getElementById("gamebox").style.display = "none"
 
 document.getElementById("next-btn").onclick = function(){
 document.getElementById("word").innerHTML = ""
-document.getElementById("spell").innerHTML = ""
+document.getElementById("definition").innerHTML = ""
+document.getElementById("spell").value = ""
 getWord()
 }
 
@@ -28,21 +31,29 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
 })
 .then(function(response){
     response.json().then(function(data){
-      time = 5;
+      console.log(data)
+      document.getElementById("countdown").style.display = "block"
+      document.getElementById("gamebox").style.display = "block"
+
+      time = 3;
 
       timer = setInterval (function function1() {
   
-        document.getElementById("timer_sec").innerHTML = "Your word will appear in: " + time + "&nbsp";
+        document.getElementById("inner_circle").innerHTML = time + "&nbsp";
         console.log(time)
         time -= 1
         if(time < 0 ) {
           clearInterval(timer)
-          document.getElementById("timer_sec").innerHTML = ""
+          document.getElementById("countdown").style.display = "none"
+          
+         
           word = data[0].word
+          definition = data[0].definition
+          pronunciation = data[0].pronunciation
           console.log(word)
         
-         
         appear = document.getElementById("word")
+
         //  console.log(appear)
         appear.innerHTML = word
        
@@ -68,7 +79,7 @@ document.getElementById("main-btn").onclick = function(event) {
 
 //   console.log(results)
 //  console.log(word)
-  if (word === results){
+  if (word.toLowerCase() === results.toLowerCase()){
 
     userScore += 1; //upgrading score value with 1
       console.log(userScore);
@@ -85,8 +96,19 @@ document.getElementById("main-btn").onclick = function(event) {
 
         var setGif = document.createElement("img")
         setGif.setAttribute('src', response.data.image_url)
+        setGif.setAttribute('id', 'giphy')
         grabGiphy.appendChild(setGif)
-        
+
+        let grabDefinition = document.getElementById("definition")
+
+        let setDefinition = `
+        <h3 id="learn"> Word: ${word} </h3>
+        <p id="learn"> Definition: ${definition}</p>
+        <p id="learn"> Pronunciation: ${pronunciation}</p>
+        `
+        grabDefinition.innerHTML = setDefinition
+       console.log(definition)
+       console.log(pronunciation)
       });
     
       
@@ -101,6 +123,15 @@ document.getElementById("main-btn").onclick = function(event) {
      setX.setAttribute("style", 'font-size:100px;')
      setX.innerHTML = '&#10060'
      getX.appendChild(setX)
+
+     let grabDefinition = document.getElementById("definition")
+
+        let setDefinition = `
+        <h3 id="learn"> Word: ${word} </h3>
+        <p id="learn"> Definition: ${definition}</p>
+        <p id="learn"> Pronunciation: ${pronunciation}</p>
+        `
+        grabDefinition.innerHTML = setDefinition
   }
     
 }

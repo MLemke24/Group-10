@@ -15,9 +15,11 @@ let click = document.getElementById("action")
 // document.getElementById("gamebox").style.display = "none"
 
 document.getElementById("next-btn").onclick = function(){
+time = 3
 document.getElementById("word").innerHTML = ""
 document.getElementById("definition").innerHTML = ""
 document.getElementById("spell").value = ""
+document.getElementById("time-left").style.display = "block"
 getWord()
 }
 
@@ -31,7 +33,7 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
 })
 .then(function(response){
     response.json().then(function(data){
-      console.log(data)
+      // console.log(data)
       document.getElementById("countdown").style.display = "block"
       document.getElementById("gamebox").style.display = "block"
 
@@ -40,11 +42,13 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
       timer = setInterval (function function1() {
   
         document.getElementById("inner_circle").innerHTML = time + "&nbsp";
-        console.log(time)
+        // console.log(time)
         time -= 1
+
         if(time < 0 ) {
           clearInterval(timer)
           document.getElementById("countdown").style.display = "none"
+          document.getElementById("time-left").style.display = "none"
           
          
           word = data[0].word
@@ -82,6 +86,7 @@ document.getElementById("main-btn").onclick = function(event) {
   if (word.toLowerCase() === results.toLowerCase()){
 
     userScore += 1; //upgrading score value with 1
+    document.getElementById("yourScore").innerHTML = "Your Score: " + userScore
       console.log(userScore);
     fetch(
       'https://api.giphy.com/v1/gifs/random?api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN'
@@ -91,7 +96,7 @@ document.getElementById("main-btn").onclick = function(event) {
         return response.json();
       })
       .then(function(response) {
-        console.log(response)
+        // console.log(response)
         let grabGiphy = document.getElementById("word")
 
         var setGif = document.createElement("img")
@@ -107,15 +112,17 @@ document.getElementById("main-btn").onclick = function(event) {
         <p id="learn"> Pronunciation: ${pronunciation}</p>
         `
         grabDefinition.innerHTML = setDefinition
-       console.log(definition)
-       console.log(pronunciation)
+      //  console.log(definition)
+      //  console.log(pronunciation)
       });
     
       
     
-	} else {
-    userScore -= 1; //downgrade score value with 1
-      console.log(userScore);
+	}  else  {
+        userScore -= 1; //downgrade score value with 1
+
+    document.getElementById("yourScore").innerHTML = "Your Score: " + userScore
+  
      let getX = document.getElementById("word")
      
 
@@ -132,7 +139,8 @@ document.getElementById("main-btn").onclick = function(event) {
         <p id="learn"> Pronunciation: ${pronunciation}</p>
         `
         grabDefinition.innerHTML = setDefinition
-  }
+      }
+  
     
 }
 

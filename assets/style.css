@@ -200,7 +200,7 @@
     text-align: center;
 }
 
-#next-btn{
+#next-btn, #end-game{
         justify-content: bottom;
         border: none;
         padding: 10px 20px;
@@ -282,7 +282,7 @@ flex: 0 0 50%;
   display: flex;
   
 }
-=======
+
 #giphy {
     align-items: center;
     margin: 0;
@@ -330,4 +330,8 @@ flex: 0 0 50%;
 #countdown {
     margin-left: 250px
 }
-
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

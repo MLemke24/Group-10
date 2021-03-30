@@ -61,10 +61,17 @@
   <!-- Game Box -->
   <section> 
   <div class="input-word-section has-text-centered">
-    <div class="quiz_box" id="gamebox" >
+    <div style="display: none" class="quiz_box" id="gamebox" >
       <div class="timer"></div>
-      <div class="time-left">Time Left</div>
-      <div id="timer_sec" class="timer_sec"></div>
+      <div id="time-left" class="time-left">Your Word Will Appear In:</div>
+      <div style="display: none" id="countdown">
+        <div id="timer_sec"></div>
+        <div style="align-items: center;" class="external_circle">
+            <div id="inner_circle" class="inner_circle"></div>
+          </div>
+        
+       </div>
+      
       <div id="word" class="word"></div>
       <div id="definition" class="definition"></div>
         

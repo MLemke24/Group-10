@@ -1,9 +1,9 @@
-let word, definition, pronunciation, appear, time
+let word, definition, pronunciation, appear, time, createCircle
 
 // Functioning Word API
 let click = document.getElementById("action")
-// let next = document.getElementById("action")
 
+// document.getElementById("gamebox").style.display = "none"
 
 document.getElementById("next-btn").onclick = function(){
 document.getElementById("word").innerHTML = ""
@@ -23,23 +23,28 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
 .then(function(response){
     response.json().then(function(data){
       console.log(data)
-      time = 5;
+      document.getElementById("countdown").style.display = "block"
+      document.getElementById("gamebox").style.display = "block"
+
+      time = 3;
 
       timer = setInterval (function function1() {
   
-        document.getElementById("timer_sec").innerHTML = "Your word will appear in: " + time + "&nbsp";
+        document.getElementById("inner_circle").innerHTML = time + "&nbsp";
         console.log(time)
         time -= 1
         if(time < 0 ) {
           clearInterval(timer)
-          document.getElementById("timer_sec").innerHTML = ""
+          document.getElementById("countdown").style.display = "none"
+          
+         
           word = data[0].word
           definition = data[0].definition
           pronunciation = data[0].pronunciation
           console.log(word)
         
-         
         appear = document.getElementById("word")
+
         //  console.log(appear)
         appear.innerHTML = word
        
@@ -65,7 +70,7 @@ document.getElementById("main-btn").onclick = function(event) {
 
 //   console.log(results)
 //  console.log(word)
-  if (word === results){
+  if (word.toLowerCase() === results.toLowerCase()){
 
     fetch(
       'https://api.giphy.com/v1/gifs/random?api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN'

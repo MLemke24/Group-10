@@ -94,6 +94,7 @@ document.getElementById("main-btn").onclick = function(event) {
 }
   
 
+
 // next.addEventListener("click", getWord)
 click.addEventListener("click", getWord)
 

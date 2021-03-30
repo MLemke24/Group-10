@@ -216,6 +216,73 @@
     align-content: flex-end;
 }
  
+
+#score {
+    font-size: 36px;
+    font-weight: bold;
+    padding-bottom: 30px;
+  }
+
+  #highScore {
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+
+  .enter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 15px;
+  }
+
+  #log {
+    display: none;
+  }
+
+  
+
+  #initials {
+    padding: 20px;
+    margin: 40px 200px;
+    text-align: center;
+  }
+
+  .finale {
+    display: none;
+  }
+
+  .yourBest {
+    padding-bottom: 15px;
+  }
+
+.finalLog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 28px;
+  border-bottom: 1px solid;
+  border-width: 100%;
+  margin: 10px 25px;
+  list-style-type: none;
+}
+
+#scores {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.yourScores {
+display: flex;
+flex: 0 0 50%;
+}
+
+.yourInitials {
+  display: flex;
+  
+}
+=======
 #giphy {
     align-items: center;
     margin: 0;
@@ -263,3 +330,4 @@
 #countdown {
     margin-left: 250px
 }
+

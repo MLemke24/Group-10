@@ -1,4 +1,13 @@
+
+var save = document.querySelector(".save")
+var highscorePage = document.querySelector(".highscores")
+var log = document.querySelector(".finalLog")
+
 let word, definition, pronunciation, appear, time, createCircle
+
+
+let userScore = 0;
+
 
 // Functioning Word API
 let click = document.getElementById("action")
@@ -72,6 +81,8 @@ document.getElementById("main-btn").onclick = function(event) {
 //  console.log(word)
   if (word.toLowerCase() === results.toLowerCase()){
 
+    userScore += 1; //upgrading score value with 1
+      console.log(userScore);
     fetch(
       'https://api.giphy.com/v1/gifs/random?api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN'
     )
@@ -103,7 +114,10 @@ document.getElementById("main-btn").onclick = function(event) {
       
     
 	} else {
+    userScore -= 1; //downgrade score value with 1
+      console.log(userScore);
      let getX = document.getElementById("word")
+     
 
      let setX = document.createElement("span")
      setX.setAttribute("style", 'font-size:100px;')
@@ -121,8 +135,93 @@ document.getElementById("main-btn").onclick = function(event) {
   }
     
 }
+
+
+// save ganme sacore and present score
+function saveGame() {
+
+  // Bring Up Scores Page
+
+  document.getElementById("log").style.display = "none"
+
+  document.getElementById("finale").style.display = "block"
+
+  // Place values of High Score and Initials
+
+  highscore = document.getElementById("highScore").innerHTML 
   
+
+  initials = document.getElementById("initials").value
+
+ 
+
+
+  let logScores = JSON.parse(localStorage.getItem("yourScores")) || [];
+ 
+// push to array and save
+  let numbers = {Score: highscore} 
+   logScores.push(numbers)
+  console.log(logScores)
+  
+
+  setScore(logScores)
+ 
+
+  localStorage.setItem("yourScores", JSON.stringify(logScores))
+
+
+};
+
+// display scores
+  function setScore(logScores) {
+
+  for (var i = 0; i < logScores.length; i++) {
+      var logScore = document.getElementById("finalLog")
+      var ulScores = document.createElement("li")
+      ulScores.setAttribute('class', 'yourScores')
+      ulScores.textContent = logScores[i].Score
+
+      finalLog.appendChild(ulScores)
+
+      var ulInitials = document.createElement('li')
+      ulInitials.setAttribute('class', 'yourInitials')
+      ulInitials.textContent = logScores[i].Initials;
+
+      finalLog.appendChild(ulInitials)
+
+      
+  };
+      
+  };
+
+
+
+// Bring up high Scores Page
+
+function highscores() {
+
+  document.getElementById("action").style.display = "none"
+
+  document.getElementById("finale").style.display = "block"
+
+  var getScore = JSON.parse(localStorage.getItem("yourScores"));
+
+  setScore(getScore)
+  console.log(getScore)
+
+  
+};
+
+
+
+
+
+
+
 
 // next.addEventListener("click", getWord)
 click.addEventListener("click", getWord)
 
+save.addEventListener("click", saveGame)
+
+highscorePage.addEventListener("click", highscores)

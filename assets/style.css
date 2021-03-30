@@ -1,3 +1,192 @@
+
+ .external_circle, .inner_circle {
+	 background: rgba(114, 221, 221, 1);
+	 background: -moz-linear-gradient(top, rgba(138, 44, 226, 1) 0%, rgba(247, 224, 234, 0.54) 100%);
+	 background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(138, 44, 226, 1)), color-stop(100%, rgba(247, 224, 234, 0.54)));
+	 background: -webkit-linear-gradient(top, rgba(138, 44, 226, 1) 0%, rgba(247, 224, 234, 0.54) 100%);
+	 background: -o-linear-gradient(top, rgba(138, 44, 226, 1) 0%, rgba(247, 224, 234, 0.54) 100%);
+	 background: -ms-linear-gradient(top, rgba(138, 44, 226, 1) 0%, rgba(247, 224, 234, 0.54) 100%);
+	 background: linear-gradient(to bottom, rgba(138, 44, 226, 1) 0%, rgba(247, 224, 234, 0.54) 100%);
+	 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72dddd', endColorstr='#f7e0ea', GradientType=0);
+}
+
+ .external_circle {
+	 -webkit-border-radius: 50%;
+	 -moz-border-radius: 50%;
+	 -ms-border-radius: 50%;
+	 -o-border-radius: 50%;
+	 border-radius: 50%;
+	 -webkit-transform: rotate(180deg);
+	 -moz-transform: rotate(180deg);
+	 -ms-transform: rotate(180deg);
+	 -o-transform: rotate(180deg);
+	 transform: rotate(180deg);
+	 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
+	 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
+	 zoom: 1;
+	 width: 250px;
+	 height: 250px;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 -webkit-animation: circle_ex 2s infinite linear;
+	 -ms-animation: circle_ex 2s infinite linear;
+	 animation: circle_ex 2s infinite linear;
+}
+ @-webkit-keyframes circle_ex {
+	 From {
+		 -webkit-transform: rotate(180deg);
+		 -moz-transform: rotate(180deg);
+		 -ms-transform: rotate(180deg);
+		 -o-transform: rotate(180deg);
+		 transform: rotate(180deg);
+		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
+		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
+		 zoom: 1;
+	}
+	 To {
+		 -webkit-transform: rotate(-180deg);
+		 -moz-transform: rotate(-180deg);
+		 -ms-transform: rotate(-180deg);
+		 -o-transform: rotate(-180deg);
+		 transform: rotate(-180deg);
+		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
+		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
+		 zoom: 1;
+	}
+}
+ @-ms-keyframes circle_ex {
+	 From {
+		 -webkit-transform: rotate(180deg);
+		 -moz-transform: rotate(180deg);
+		 -ms-transform: rotate(180deg);
+		 -o-transform: rotate(180deg);
+		 transform: rotate(180deg);
+		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
+		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
+		 zoom: 1;
+	}
+	 To {
+		 -webkit-transform: rotate(-180deg);
+		 -moz-transform: rotate(-180deg);
+		 -ms-transform: rotate(-180deg);
+		 -o-transform: rotate(-180deg);
+		 transform: rotate(-180deg);
+		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
+		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
+		 zoom: 1;
+	}
+}
+ @keyframes circle_ex {
+	 From {
+		 -webkit-transform: rotate(180deg);
+		 -moz-transform: rotate(180deg);
+		 -ms-transform: rotate(180deg);
+		 -o-transform: rotate(180deg);
+		 transform: rotate(180deg);
+		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
+		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
+		 zoom: 1;
+	}
+	 To {
+		 -webkit-transform: rotate(-180deg);
+		 -moz-transform: rotate(-180deg);
+		 -ms-transform: rotate(-180deg);
+		 -o-transform: rotate(-180deg);
+		 transform: rotate(-180deg);
+		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
+		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
+		 zoom: 1;
+	}
+}
+ .inner_circle {
+	 -webkit-border-radius: 50%;
+	 -moz-border-radius: 50%;
+	 -ms-border-radius: 50%;
+	 -o-border-radius: 50%;
+	 border-radius: 50%;
+	 -webkit-transform: rotate(-180deg);
+	 -moz-transform: rotate(-180deg);
+	 -ms-transform: rotate(-180deg);
+	 -o-transform: rotate(-180deg);
+	 transform: rotate(-180deg);
+	 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
+	 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
+	 zoom: 1;
+	 width: 150px;
+	 height: 150px;
+	 -webkit-animation: circle_in 2s infinite linear;
+	 -ms-animation: circle_in 2s infinite linear;
+	 animation: circle_in 2s infinite linear;
+}
+ @-webkit-keyframes circle_in {
+	 From {
+		 -webkit-transform: rotate(-180deg);
+		 -moz-transform: rotate(-180deg);
+		 -ms-transform: rotate(-180deg);
+		 -o-transform: rotate(-180deg);
+		 transform: rotate(-180deg);
+		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
+		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
+		 zoom: 1;
+	}
+	 To {
+		 -webkit-transform: rotate(180deg);
+		 -moz-transform: rotate(180deg);
+		 -ms-transform: rotate(180deg);
+		 -o-transform: rotate(180deg);
+		 transform: rotate(180deg);
+		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
+		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
+		 zoom: 1;
+	}
+}
+ @-ms-keyframes circle_in {
+	 From {
+		 -webkit-transform: rotate(-180deg);
+		 -moz-transform: rotate(-180deg);
+		 -ms-transform: rotate(-180deg);
+		 -o-transform: rotate(-180deg);
+		 transform: rotate(-180deg);
+		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
+		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
+		 zoom: 1;
+	}
+	 To {
+		 -webkit-transform: rotate(180deg);
+		 -moz-transform: rotate(180deg);
+		 -ms-transform: rotate(180deg);
+		 -o-transform: rotate(180deg);
+		 transform: rotate(180deg);
+		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
+		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
+		 zoom: 1;
+	}
+}
+ @keyframes circle_in {
+	 From {
+		 -webkit-transform: rotate(-180deg);
+		 -moz-transform: rotate(-180deg);
+		 -ms-transform: rotate(-180deg);
+		 -o-transform: rotate(-180deg);
+		 transform: rotate(-180deg);
+		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
+		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
+		 zoom: 1;
+	}
+	 To {
+		 -webkit-transform: rotate(180deg);
+		 -moz-transform: rotate(180deg);
+		 -ms-transform: rotate(180deg);
+		 -o-transform: rotate(180deg);
+		 transform: rotate(180deg);
+		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
+		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
+		 zoom: 1;
+	}
+}
+ 
+
 .info_box, .quiz_box {
     background-color: hsl(0, 0%, 100%);
     border-radius: 5px;
@@ -11,9 +200,66 @@
     text-align: center;
 }
 
+#next-btn{
+        justify-content: bottom;
+        border: none;
+        padding: 10px 20px;
+        font-size: 24px;
+        font-weight: bold;
+        border-radius: 10px;
+        margin: 40px 20px;
+}
+
 .enter-box {
     display: flex;
     justify-content: center;
     align-content: flex-end;
 }
  
+#giphy {
+    align-items: center;
+    margin: 0;
+    display: inline;
+    width: 160px;
+    height: 180px;
+}
+
+.time-left {
+    font-size: 25px;
+    font-weight: bolder;
+    color: blueviolet;
+}
+
+.score-keeper {
+    text-align: center;
+    margin: 10px, 200px;
+    font-size: 25px;
+    font-weight: bolder;
+    color: black;
+}
+
+#learn {
+     font-size: 15px;
+     font-weight: bolder;
+
+}
+
+#inner_circle {
+    text-align: center;
+    margin: 20px, 200px;
+    font-size: 100px;
+    font-weight: bolder;
+    color: white;
+    padding-left: 25px;
+}
+
+#word {
+    font-size: 35px;
+    font-weight: bolder;
+    color:rgb(138, 44, 226);
+    
+}
+
+#countdown {
+    margin-left: 250px
+}

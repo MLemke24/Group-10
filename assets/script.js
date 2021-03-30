@@ -1,4 +1,11 @@
+var save = document.querySelector(".save")
+var highscorePage = document.querySelector(".highscores")
+var log = document.querySelector(".finalLog")
+
 let word, appear, time
+
+let userScore = 0;
+
 
 // Functioning Word API
 let click = document.getElementById("action")
@@ -20,7 +27,6 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
 	}
 })
 .then(function(response){
-    console.log('RESPONSE HAPPENING first fetch')
     response.json().then(function(data){
       time = 5;
 
@@ -63,40 +69,9 @@ document.getElementById("main-btn").onclick = function(event) {
 //   console.log(results)
 //  console.log(word)
   if (word === results){
-<<<<<<< HEAD
-      console.log('WE R IN THE IF!!!')
 
-      const settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://giphy.p.rapidapi.com/v1/gifs/search?api_key=33awPwF4gZQMEcMG6udPnLDeOiylsMLV&q=funny%20cat",
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-key": "d8002eed6bmsh7f05bd1fa3ad782p18b85cjsnc8a6a8a71b69",
-            "x-rapidapi-host": "giphy.p.rapidapi.com"
-        }
-    };
-    
-    $.ajax(settings).done(function (response) {
-        console.log('GIFY!!!!',response.data[0].images.original.url);
-        var img = $('<img>')
-        img.attr('src', response.data[0].images.original.url)
-        $('#gamebox').append(img)
-    });
-
-    // fetch("https://ronreiter-meme-generator.p.rapidapi.com/meme?meme=Condescending-Wonka&bottom=Bottom%20Text&top=Top%20Text&font_size=50&font=Impact", {
-    //     "method": "GET",
-    //     "headers": {
-    //         "x-rapidapi-key": "d8002eed6bmsh7f05bd1fa3ad782p18b85cjsnc8a6a8a71b69",
-    //         "x-rapidapi-host": "ronreiter-meme-generator.p.rapidapi.com"
-    //     }
-    // }).then(res => {
-    //     console.log('REs!!!!!', res)
-    //     return res.body.json()
-    // }).then(res => {
-    //         console.log('dataaa coming back form fetch', res)
-=======
-
+    userScore += 1; //upgrading score value with 1
+      console.log(userScore);
     fetch(
       'https://api.giphy.com/v1/gifs/random?api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN'
     )
@@ -113,21 +88,14 @@ document.getElementById("main-btn").onclick = function(event) {
         grabGiphy.appendChild(setGif)
         
       });
->>>>>>> main
     
       
-<<<<<<< HEAD
-    //             alert(" this is a test to see if this works! Add a point")
-           
-
-    //     })
-} else {
-    alert("this is just a test You suck")
-}
-=======
     
 	} else {
+    userScore -= 1; //downgrade score value with 1
+      console.log(userScore);
      let getX = document.getElementById("word")
+     
 
      let setX = document.createElement("span")
      setX.setAttribute("style", 'font-size:100px;')
@@ -135,11 +103,94 @@ document.getElementById("main-btn").onclick = function(event) {
      getX.appendChild(setX)
   }
     
->>>>>>> main
 }
+
+
+// save ganme sacore and present score
+function saveGame() {
+
+  // Bring Up Scores Page
+
+  document.getElementById("log").style.display = "none"
+
+  document.getElementById("finale").style.display = "block"
+
+  // Place values of High Score and Initials
+
+  highscore = document.getElementById("highScore").innerHTML 
   
+
+  initials = document.getElementById("initials").value
+
+ 
+
+
+  let logScores = JSON.parse(localStorage.getItem("yourScores")) || [];
+ 
+// push to array and save
+  let numbers = {Score: highscore} 
+   logScores.push(numbers)
+  console.log(logScores)
+  
+
+  setScore(logScores)
+ 
+
+  localStorage.setItem("yourScores", JSON.stringify(logScores))
+
+
+};
+
+// display scores
+  function setScore(logScores) {
+
+  for (var i = 0; i < logScores.length; i++) {
+      var logScore = document.getElementById("finalLog")
+      var ulScores = document.createElement("li")
+      ulScores.setAttribute('class', 'yourScores')
+      ulScores.textContent = logScores[i].Score
+
+      finalLog.appendChild(ulScores)
+
+      var ulInitials = document.createElement('li')
+      ulInitials.setAttribute('class', 'yourInitials')
+      ulInitials.textContent = logScores[i].Initials;
+
+      finalLog.appendChild(ulInitials)
+
+      
+  };
+      
+  };
+
+
+
+// Bring up high Scores Page
+
+function highscores() {
+
+  document.getElementById("action").style.display = "none"
+
+  document.getElementById("finale").style.display = "block"
+
+  var getScore = JSON.parse(localStorage.getItem("yourScores"));
+
+  setScore(getScore)
+  console.log(getScore)
+
+  
+};
+
+
+
+
+
+
 
 
 // next.addEventListener("click", getWord)
 click.addEventListener("click", getWord)
 
+save.addEventListener("click", saveGame)
+
+highscorePage.addEventListener("click", highscores)

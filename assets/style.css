@@ -1,0 +1,19 @@
+.info_box, .quiz_box {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    border-width: 1px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+    color: hsl(206, 17%, 28%);
+    margin: 30px auto;
+    max-width: 800px;
+    padding: 30px 40px;
+    height: 500px;
+    text-align: center;
+}
+
+.enter-box {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+}
+ 

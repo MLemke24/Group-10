@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <link rel="stylesheet" href="./assets/style.css">
-    <!-- Tail winds -->
-		<title>Nerd Words</title>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
- 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./assets/style.css">
+  <!-- Tail winds -->
+  <title>Nerd Words</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+
 </head>
 
 <body>
@@ -37,23 +38,24 @@
       </div>
       <div class="message-body is-large">
         <div class="info-list">
-          <div class="info">1. When you click "Start", a <span>3-second</span> countdown will begin, at the end, you word will pop up for only 1 second.</div>
-          <div class="info">2. Spell the word EXACTLY as it appeared. If you spelled the word correctly, you get 1 point.</div>
+          <div class="info">1. When you click "Start", a <span>3-second</span> countdown will begin, at the end, you
+            word will pop up for only 1 second.</div>
+          <div class="info">2. Spell the word as it appeared. If you spelled the word correctly, you get 1 point.</div>
           <div class="info">3. If you spelled it wrong, you will get a point taken away.</div>
           <div class="info">4. When you are done, simply click "End Game"</div>
-      </div>
+        </div>
 
-      
+
     </article>
 
     <div id="start-game" class="has-text-centered">
-    
+
       <br>
       <div id="start-button" class="container">
-      <span id="action" class="pulse-button">Start Game</span>
-       </div>
+        <span id="action" class="pulse-button">Start Game</span>
+      </div>
     </div>
-  </div>       
+  </div>
 
   <!-- Countdown box on page 2-->
   <div class="timer-div">
@@ -61,33 +63,36 @@
   </div>
 
   <!-- Game Box -->
-  <section> 
-  <div class="input-word-section has-text-centered">
-    <div style="display: none" class="quiz_box" id="gamebox" >
-      <div class="timer"></div>
-      <div class="yourScore has-text-right title is-5" id="yourScore">
-        <p></p>
-      </div>
-      <div id="time-left" class="time-left">Your Word Will Appear In:</div>
-      <div style="display: none" id="countdown">
-        <div id="timer_sec"></div>
-        <div style="align-items: center;" class="external_circle">
-          <div id="inner_circle" class="inner_circle"></div>
+  <section>
+    <div class="input-word-section has-text-centered">
+      <div style="display: none" class="quiz_box" id="gamebox">
+        <div class="timer"></div>
+        <div class="yourScore has-text-right title is-5" id="yourScore">
+          <p></p>
         </div>
+        <div id="time-left" class="time-left">Your Word Will Appear In:</div>
+        <div style="display: none" id="countdown">
+          <div id="timer_sec"></div>
+          <div style="align-items: center;" class="external_circle">
+            <div id="inner_circle" class="inner_circle"></div>
+          </div>
+        </div>
+
+        <div id="word" class="word"></div>
+        <div id="definition" class="definition"></div>
+
+        <div class="enter-box" id="enter-box">
+          <input id="spell" class="spell input is-info is-focused" type="text" placeholder="Enter Word Here"
+            autofocus="autofocus">
+          <button id="main-btn" class="btn btn-primary button is-info">Enter</button>
+        </div>
+        <button id="next-btn" class="btn btn-primary button is-info is-outlined is-rounded has-text-centered">Next
+          Word</button>
+        <button id="end-game" class="end-game btn btn-primary button is-danger is-outlined has-text-right">End
+          Game</button>
       </div>
-      
-      <div id="word" class="word"></div>
-      <div id="definition" class="definition"></div>
-        
-      <div class="enter-box" id="enter-box">
-        <input id="spell" class="spell input is-info is-focused" type ="text" placeholder="Enter Word Here" autofocus="autofocus">
-        <button id="main-btn" class="btn btn-primary button is-info">Enter</button>
-      </div>
-      <button id="next-btn" class="btn btn-primary button is-info is-outlined is-rounded has-text-centered">Next Word</button>
-      <button id="end-game" class="end-game btn btn-primary button is-danger is-outlined has-text-right">End Game</button>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Log Scores Page-->
   <div id="log" class="log has-text-centered">
@@ -98,12 +103,12 @@
     <div class="highScore">
       <h3 id="highScore"></h3>
     </div>
-    
+
     <div class="enter">
-        <label></label>
-        <input type="text" placeholder="Your Initials" name="initials" id="initials">
+      <label></label>
+      <input type="text" placeholder="Your Initials" name="initials" id="initials">
     </div>
-    
+
     <div class="choices">
       <button id="save" class="save button is-primary">Save</button>
       <button id="try" class="try button is-light is-info">Try Again</button>
@@ -121,6 +126,7 @@
     </div>
   </div>
 
-	<script src="./assets/script.js"></script>
+  <script src="./assets/script.js"></script>
 </body>
+
 </html>

@@ -9,11 +9,10 @@ let word, definition, pronunciation, appear, time, createCircle
 let userScore = 0;
 
 
-// Functioning Word API
+
 let click = document.getElementById("action")
 
-// document.getElementById("gamebox").style.display = "none"
-
+// Next Button On Click
 document.getElementById("next-btn").onclick = function(){
 time = 3
 document.getElementById("word").innerHTML = ""
@@ -23,6 +22,7 @@ document.getElementById("time-left").style.display = "block"
 getWord()
 }
 
+// Get Word Function 
 let getWord = function() {
 fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
 	"method": "GET",
@@ -33,7 +33,7 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
 })
 .then(function(response){
     response.json().then(function(data){
-      // console.log(data)
+      document.getElementById("start-game").style.display = "none"
       document.getElementById("countdown").style.display = "block"
       document.getElementById("gamebox").style.display = "block"
 
@@ -219,6 +219,7 @@ function highscores() {
 
   
 };
+
 
 
 

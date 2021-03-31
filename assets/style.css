@@ -4,7 +4,8 @@ html {
 
 /* Start Button Styling Start */
 #start-button {
-	margin-top: 250px;
+ margin-top: 250px;
+
 }
 
 .pulse-button {
@@ -37,55 +38,32 @@ html {
 }
 
 @-webkit-keyframes pulse {
-	0% {
-		@include transform(scale(0.95));
-	}
-	70% {
-		@include transform(scale(1));
-		box-shadow: 0 0 0 50px rgba(#5a99d4, 0);
-	}
-	100% {
-		@include transform(scale(0.95));
-		box-shadow: 0 0 0 0 rgba(#5a99d4, 0);
-	}
-}
-/* Start Button Styling End */
 
-.external_circle,
-.inner_circle {
-	background: rgba(114, 221, 221, 1);
-	background: -moz-linear-gradient(
-		top,
-		rgba(138, 44, 226, 1) 0%,
-		rgba(247, 224, 234, 0.54) 100%
-	);
-	background: -webkit-gradient(
-		left top,
-		left bottom,
-		color-stop(0%, rgba(138, 44, 226, 1)),
-		color-stop(100%, rgba(247, 224, 234, 0.54))
-	);
-	background: -webkit-linear-gradient(
-		top,
-		rgba(138, 44, 226, 1) 0%,
-		rgba(247, 224, 234, 0.54) 100%
-	);
-	background: -o-linear-gradient(
-		top,
-		rgba(138, 44, 226, 1) 0%,
-		rgba(247, 224, 234, 0.54) 100%
-	);
-	background: -ms-linear-gradient(
-		top,
-		rgba(138, 44, 226, 1) 0%,
-		rgba(247, 224, 234, 0.54) 100%
-	);
-	background: linear-gradient(
-		to bottom,
-		rgba(138, 44, 226, 1) 0%,
-		rgba(247, 224, 234, 0.54) 100%
-	);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72dddd', endColorstr='#f7e0ea', GradientType=0);
+  0% {
+    @include transform(scale(.95));
+  }
+  70% {
+    @include transform(scale(1));
+    box-shadow: 0 0 0 50px rgba(#5a99d4, 0);
+  }
+  100% {
+    @include transform(scale(.95));
+    box-shadow: 0 0 0 0 rgba(#5a99d4, 0);
+  }
+}
+ /* Start Button Styling End */
+
+ /* Countdown to Word */
+ 
+ .external_circle, .inner_circle {
+	 background: rgba(114, 221, 221, 1);
+	 background: -moz-linear-gradient(top, rgba(138, 44, 226, 1) 0%, rgba(247, 224, 234, 0.54) 100%);
+	 background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(138, 44, 226, 1)), color-stop(100%, rgba(247, 224, 234, 0.54)));
+	 background: -webkit-linear-gradient(top, rgba(138, 44, 226, 1) 0%, rgba(247, 224, 234, 0.54) 100%);
+	 background: -o-linear-gradient(top, rgba(138, 44, 226, 1) 0%, rgba(247, 224, 234, 0.54) 100%);
+	 background: -ms-linear-gradient(top, rgba(138, 44, 226, 1) 0%, rgba(247, 224, 234, 0.54) 100%);
+	 background: linear-gradient(to bottom, rgba(138, 44, 226, 1) 0%, rgba(247, 224, 234, 0.54) 100%);
+	 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72dddd', endColorstr='#f7e0ea', GradientType=0);
 }
 
 .external_circle {
@@ -272,18 +250,18 @@ html {
 	font-size: larger;
 }
 
-.info_box,
-.quiz_box {
-	background-color: hsl(0, 0%, 100%);
-	border-radius: 5px;
-	border-width: 1px;
-	box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-	color: hsl(206, 17%, 28%);
-	margin: 30px auto;
-	max-width: 800px;
-	padding: 30px 40px;
-	height: 500px;
-	text-align: center;
+.info_box, .log, .finale, .quiz_box {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    border-width: 1px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+    color: hsl(206, 17%, 28%);
+    margin: 30px auto;
+    max-width: 800px;
+    padding: 30px 40px;
+    height: 500px;
+    text-align: center;
+
 }
 
 #gamebox {

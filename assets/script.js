@@ -1,4 +1,4 @@
-
+// Global calls 
 var save = document.querySelector(".save")
 var highscorePage = document.querySelector(".highscores")
 var log = document.querySelector(".finalLog")

@@ -31,21 +31,16 @@
 
   <!-- Front page or page 1-->
   <div class="page-1">
-    <article class="message">
+    <article class="message is-info">
       <div class="message-header">
         <h2>Rules</h2>
       </div>
-      <div class="message-body">
+      <div class="message-body is-large">
         <div class="info-list">
-          <div class="info">1. When you click "Start", a <span>5 second</span> countdown will begin, at the end, you word will pop up for only 1 second.</div>
+          <div class="info">1. When you click "Start", a <span>3-second</span> countdown will begin, at the end, you word will pop up for only 1 second.</div>
           <div class="info">2. Spell the word EXACTLY as it appeared. If you spelled the word correctly, you get 1 point.</div>
           <div class="info">3. If you spelled it wrong, you will get a point taken away.</div>
           <div class="info">4. When you are done, simply click "End Game"</div>
-          <div class="yourScore" id="yourScore">
-              <p>
-                  
-              </p>
-          </div>
       </div>
 
       
@@ -70,26 +65,26 @@
   <div class="input-word-section has-text-centered">
     <div style="display: none" class="quiz_box" id="gamebox" >
       <div class="timer"></div>
+      <div class="yourScore has-text-right" id="yourScore">
+        <p></p>
+      </div>
       <div id="time-left" class="time-left">Your Word Will Appear In:</div>
       <div style="display: none" id="countdown">
         <div id="timer_sec"></div>
         <div style="align-items: center;" class="external_circle">
-            <div id="inner_circle" class="inner_circle"></div>
-          </div>
-        
-       </div>
+          <div id="inner_circle" class="inner_circle"></div>
+        </div>
+      </div>
       
       <div id="word" class="word"></div>
       <div id="definition" class="definition"></div>
         
       <div class="enter-box" id="enter-box">
-      <input style="border: solid;" id="spell" class="spell" placeholder="Enter Word Here">
-      <button id="main-btn" class="btn btn-primary button is-success">Enter</button>
-     </div>
-     <div id="buttons" class="buttons">
-     <button id="next-btn" class="btn btn-primary button is-success">Next Word</button>
-     <button id="end-game" class="end-game btn btn-primary button is-success">End Game</button>
+        <input id="spell" class="spell input is-info is-focused" type ="text" placeholder="Enter Word Here">
+        <button id="main-btn" class="btn btn-primary button is-info">Enter</button>
       </div>
+      <button id="next-btn" class="btn btn-primary button is-info is-outlined is-rounded has-text-centered">Next Word</button>
+      <button id="end-game" class="end-game btn btn-primary button is-danger is-outlined has-text-right">End Game</button>
     </div>
   </div>
 </section>

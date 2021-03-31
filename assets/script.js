@@ -5,10 +5,7 @@ var log = document.querySelector(".finalLog")
 
 let word, definition, pronunciation, appear, time, createCircle
 
-
 let userScore = 0;
-
-
 
 let click = document.getElementById("action")
 
@@ -33,10 +30,13 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
 })
 .then(function(response){
     response.json().then(function(data){
+      
+      // Change Views
       document.getElementById("start-game").style.display = "none"
       document.getElementById("countdown").style.display = "block"
       document.getElementById("gamebox").style.display = "block"
-
+      
+      // 3 Second Timer
       time = 3;
 
       timer = setInterval (function function1() {
@@ -46,11 +46,15 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
         time -= 1
 
         if(time < 0 ) {
+
+        //  WORD APPEARS!
+
           clearInterval(timer)
+          document.getElementById("inner_circle").innerHTML = ""
           document.getElementById("countdown").style.display = "none"
           document.getElementById("time-left").style.display = "none"
           
-         
+         // Get Values
           word = data[0].word
           definition = data[0].definition
           pronunciation = data[0].pronunciation
@@ -76,13 +80,14 @@ fetch("https://random-words-with-pronunciation.p.rapidapi.com/word", {
 });
 };
 
-
+// When Next Button Is Clicked
 document.getElementById("main-btn").onclick = function(event) {
   
   let results = document.getElementById("spell").value
-
 //   console.log(results)
 //  console.log(word)
+
+// Word Comparison
   if (word.toLowerCase() === results.toLowerCase()){
 
     userScore += 1; //upgrading score value with 1
@@ -117,7 +122,7 @@ document.getElementById("main-btn").onclick = function(event) {
       });
     
       
-    
+  // IF  word was wrong
 	}  else  {
         userScore -= 1; //downgrade score value with 1
 
@@ -219,13 +224,6 @@ function highscores() {
 
   
 };
-
-
-
-
-
-
-
 
 
 // next.addEventListener("click", getWord)

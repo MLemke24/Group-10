@@ -55,6 +55,8 @@
   }
 }
  /* Start Button Styling End */
+
+ /* Countdown to Word */
  
  .external_circle, .inner_circle {
 	 background: rgba(114, 221, 221, 1);
@@ -245,7 +247,7 @@
  
 /* Div boxes and other stuff */
 
-.info_box, .quiz_box {
+.info_box, .log, .finale, .quiz_box {
     background-color: hsl(0, 0%, 100%);
     border-radius: 5px;
     border-width: 1px;

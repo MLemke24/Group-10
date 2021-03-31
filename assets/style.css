@@ -1,43 +1,44 @@
+html {
+	background: linear-gradient(280deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+}
 
- html{
-    background: linear-gradient(280deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
- }
-
- /* Start Button Styling Start */
+/* Start Button Styling Start */
 #start-button {
  margin-top: 250px;
+
 }
 
 .pulse-button {
-  position: relative;
-  top: 20%;
-  left: 00%;
-  margin-left: -50px;
-  margin-top: -50px;
-  display: inline-block;
-  width: 320px;
-  height: 40px;
-  font-size: 1.3em;
-  font-weight: light;
-  font-family: 'Trebuchet MS', sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 40px;
-  letter-spacing: 0px;
-  color: white;
-  border: none;
-  border-radius: 0%;
-  background: #65378F;
-  cursor: pointer;
-  box-shadow: 0 0 0 0 rgba(#65378F, .25);
-  -webkit-animation: pulse 1.7s infinite;
+	position: relative;
+	top: 20%;
+	left: 00%;
+	margin-left: -50px;
+	margin-top: -50px;
+	display: inline-block;
+	width: 320px;
+	height: 40px;
+	font-size: 1.3em;
+	font-weight: light;
+	font-family: 'Trebuchet MS', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 40px;
+	letter-spacing: 0px;
+	color: white;
+	border: none;
+	border-radius: 0%;
+	background: #65378f;
+	cursor: pointer;
+	box-shadow: 0 0 0 0 rgba(#65378f, 0.25);
+	-webkit-animation: pulse 1.7s infinite;
 }
 
 .pulse-button:hover {
-  -webkit-animation: none;
+	-webkit-animation: none;
 }
 
 @-webkit-keyframes pulse {
+
   0% {
     @include transform(scale(.95));
   }
@@ -65,183 +66,189 @@
 	 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72dddd', endColorstr='#f7e0ea', GradientType=0);
 }
 
- .external_circle {
-	 -webkit-border-radius: 50%;
-	 -moz-border-radius: 50%;
-	 -ms-border-radius: 50%;
-	 -o-border-radius: 50%;
-	 border-radius: 50%;
-	 -webkit-transform: rotate(180deg);
-	 -moz-transform: rotate(180deg);
-	 -ms-transform: rotate(180deg);
-	 -o-transform: rotate(180deg);
-	 transform: rotate(180deg);
-	 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
-	 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
-	 zoom: 1;
-	 width: 250px;
-	 height: 250px;
-	 display: flex;
-	 align-items: center;
-	 justify-content: center;
-	 -webkit-animation: circle_ex 2s infinite linear;
-	 -ms-animation: circle_ex 2s infinite linear;
-	 animation: circle_ex 2s infinite linear;
+.external_circle {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+	filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
+	zoom: 1;
+	width: 250px;
+	height: 250px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	-webkit-animation: circle_ex 2s infinite linear;
+	-ms-animation: circle_ex 2s infinite linear;
+	animation: circle_ex 2s infinite linear;
 }
- @-webkit-keyframes circle_ex {
-	 From {
-		 -webkit-transform: rotate(180deg);
-		 -moz-transform: rotate(180deg);
-		 -ms-transform: rotate(180deg);
-		 -o-transform: rotate(180deg);
-		 transform: rotate(180deg);
-		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
-		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
-		 zoom: 1;
+@-webkit-keyframes circle_ex {
+	from {
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		transform: rotate(180deg);
+		filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
+		-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
+		zoom: 1;
 	}
-	 To {
-		 -webkit-transform: rotate(-180deg);
-		 -moz-transform: rotate(-180deg);
-		 -ms-transform: rotate(-180deg);
-		 -o-transform: rotate(-180deg);
-		 transform: rotate(-180deg);
-		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
-		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
-		 zoom: 1;
-	}
-}
- @-ms-keyframes circle_ex {
-	 From {
-		 -webkit-transform: rotate(180deg);
-		 -moz-transform: rotate(180deg);
-		 -ms-transform: rotate(180deg);
-		 -o-transform: rotate(180deg);
-		 transform: rotate(180deg);
-		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
-		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
-		 zoom: 1;
-	}
-	 To {
-		 -webkit-transform: rotate(-180deg);
-		 -moz-transform: rotate(-180deg);
-		 -ms-transform: rotate(-180deg);
-		 -o-transform: rotate(-180deg);
-		 transform: rotate(-180deg);
-		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
-		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
-		 zoom: 1;
+	to {
+		-webkit-transform: rotate(-180deg);
+		-moz-transform: rotate(-180deg);
+		-ms-transform: rotate(-180deg);
+		-o-transform: rotate(-180deg);
+		transform: rotate(-180deg);
+		filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
+		-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
+		zoom: 1;
 	}
 }
- @keyframes circle_ex {
-	 From {
-		 -webkit-transform: rotate(180deg);
-		 -moz-transform: rotate(180deg);
-		 -ms-transform: rotate(180deg);
-		 -o-transform: rotate(180deg);
-		 transform: rotate(180deg);
-		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
-		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
-		 zoom: 1;
+@-ms-keyframes circle_ex {
+	from {
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		transform: rotate(180deg);
+		filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
+		-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
+		zoom: 1;
 	}
-	 To {
-		 -webkit-transform: rotate(-180deg);
-		 -moz-transform: rotate(-180deg);
-		 -ms-transform: rotate(-180deg);
-		 -o-transform: rotate(-180deg);
-		 transform: rotate(-180deg);
-		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
-		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
-		 zoom: 1;
-	}
-}
- .inner_circle {
-	 -webkit-border-radius: 50%;
-	 -moz-border-radius: 50%;
-	 -ms-border-radius: 50%;
-	 -o-border-radius: 50%;
-	 border-radius: 50%;
-	 -webkit-transform: rotate(-180deg);
-	 -moz-transform: rotate(-180deg);
-	 -ms-transform: rotate(-180deg);
-	 -o-transform: rotate(-180deg);
-	 transform: rotate(-180deg);
-	 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
-	 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
-	 zoom: 1;
-	 width: 150px;
-	 height: 150px;
-	 -webkit-animation: circle_in 2s infinite linear;
-	 -ms-animation: circle_in 2s infinite linear;
-	 animation: circle_in 2s infinite linear;
-}
- @-webkit-keyframes circle_in {
-	 From {
-		 -webkit-transform: rotate(-180deg);
-		 -moz-transform: rotate(-180deg);
-		 -ms-transform: rotate(-180deg);
-		 -o-transform: rotate(-180deg);
-		 transform: rotate(-180deg);
-		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
-		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
-		 zoom: 1;
-	}
-	 To {
-		 -webkit-transform: rotate(180deg);
-		 -moz-transform: rotate(180deg);
-		 -ms-transform: rotate(180deg);
-		 -o-transform: rotate(180deg);
-		 transform: rotate(180deg);
-		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
-		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
-		 zoom: 1;
+	to {
+		-webkit-transform: rotate(-180deg);
+		-moz-transform: rotate(-180deg);
+		-ms-transform: rotate(-180deg);
+		-o-transform: rotate(-180deg);
+		transform: rotate(-180deg);
+		filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
+		-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
+		zoom: 1;
 	}
 }
- @-ms-keyframes circle_in {
-	 From {
-		 -webkit-transform: rotate(-180deg);
-		 -moz-transform: rotate(-180deg);
-		 -ms-transform: rotate(-180deg);
-		 -o-transform: rotate(-180deg);
-		 transform: rotate(-180deg);
-		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
-		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
-		 zoom: 1;
+@keyframes circle_ex {
+	from {
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		transform: rotate(180deg);
+		filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
+		-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
+		zoom: 1;
 	}
-	 To {
-		 -webkit-transform: rotate(180deg);
-		 -moz-transform: rotate(180deg);
-		 -ms-transform: rotate(180deg);
-		 -o-transform: rotate(180deg);
-		 transform: rotate(180deg);
-		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
-		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
-		 zoom: 1;
-	}
-}
- @keyframes circle_in {
-	 From {
-		 -webkit-transform: rotate(-180deg);
-		 -moz-transform: rotate(-180deg);
-		 -ms-transform: rotate(-180deg);
-		 -o-transform: rotate(-180deg);
-		 transform: rotate(-180deg);
-		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
-		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
-		 zoom: 1;
-	}
-	 To {
-		 -webkit-transform: rotate(180deg);
-		 -moz-transform: rotate(180deg);
-		 -ms-transform: rotate(180deg);
-		 -o-transform: rotate(180deg);
-		 transform: rotate(180deg);
-		 filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
-		 -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
-		 zoom: 1;
+	to {
+		-webkit-transform: rotate(-180deg);
+		-moz-transform: rotate(-180deg);
+		-ms-transform: rotate(-180deg);
+		-o-transform: rotate(-180deg);
+		transform: rotate(-180deg);
+		filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
+		-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
+		zoom: 1;
 	}
 }
- 
+.inner_circle {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-transform: rotate(-180deg);
+	-moz-transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	-o-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+	filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
+	zoom: 1;
+	width: 150px;
+	height: 150px;
+	-webkit-animation: circle_in 2s infinite linear;
+	-ms-animation: circle_in 2s infinite linear;
+	animation: circle_in 2s infinite linear;
+}
+@-webkit-keyframes circle_in {
+	from {
+		-webkit-transform: rotate(-180deg);
+		-moz-transform: rotate(-180deg);
+		-ms-transform: rotate(-180deg);
+		-o-transform: rotate(-180deg);
+		transform: rotate(-180deg);
+		filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
+		-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
+		zoom: 1;
+	}
+	to {
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		transform: rotate(180deg);
+		filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
+		-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
+		zoom: 1;
+	}
+}
+@-ms-keyframes circle_in {
+	from {
+		-webkit-transform: rotate(-180deg);
+		-moz-transform: rotate(-180deg);
+		-ms-transform: rotate(-180deg);
+		-o-transform: rotate(-180deg);
+		transform: rotate(-180deg);
+		filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
+		-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
+		zoom: 1;
+	}
+	to {
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		transform: rotate(180deg);
+		filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
+		-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
+		zoom: 1;
+	}
+}
+@keyframes circle_in {
+	from {
+		-webkit-transform: rotate(-180deg);
+		-moz-transform: rotate(-180deg);
+		-ms-transform: rotate(-180deg);
+		-o-transform: rotate(-180deg);
+		transform: rotate(-180deg);
+		filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180));
+		-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180), M12=-sin(-180), M21=sin(-180), M22=cos(-180))";
+		zoom: 1;
+	}
+	to {
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		transform: rotate(180deg);
+		filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
+		-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
+		zoom: 1;
+	}
+}
+
 /* Div boxes and other stuff */
+.yourScore {
+	margin-top: 0px;
+	margin-bottom: 0px:
+	text-color: blue;
+	font-size: larger;
+}
 
 .info_box, .log, .finale, .quiz_box {
     background-color: hsl(0, 0%, 100%);
@@ -254,140 +261,148 @@
     padding: 30px 40px;
     height: 500px;
     text-align: center;
+
 }
 
-#next-btn, #end-game{
-        justify-content: bottom;
-        border: none;
-        padding: 10px 20px;
-        font-size: 24px;
-        font-weight: bold;
-        border-radius: 10px;
-        margin: 40px 20px;
+#gamebox {
+	padding-bottom: 100px;
+}
+
+#next-btn,
+#end-game {
+	justify-content: bottom;
+	border: none;
+	padding: 10px 20px;
+	font-size: 24px;
+	font-weight: bold;
+	border-radius: 10px;
+	margin: 20px 0px;
+}
+#time-left {
+	margin-top: 0px;
 }
 
 .enter-box {
-    display: flex;
-    justify-content: center;
-    align-content: flex-end;
+	display: flex;
+	justify-content: center;
+	align-content: flex-end;
+	margin-top: 15px;
 }
- 
+
+#spell {
+	width: 35%;
+}
 
 #score {
-    font-size: 36px;
-    font-weight: bold;
-    padding-bottom: 30px;
-  }
+	font-size: 36px;
+	font-weight: bold;
+	padding-bottom: 30px;
+}
 
-  #highScore {
-    font-size: 30px;
-    padding-bottom: 20px;
-  }
+#highScore {
+	font-size: 30px;
+	padding-bottom: 20px;
+}
 
-  .enter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: bold;
-    padding-bottom: 15px;
-  }
+.enter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 24px;
+	font-weight: bold;
+	padding-bottom: 15px;
+}
 
-  #log {
-    display: none;
-  }
+#log {
+	display: none;
+}
 
-  
+#initials {
+	padding: 20px;
+	margin: 40px 200px;
+	text-align: center;
+}
 
-  #initials {
-    padding: 20px;
-    margin: 40px 200px;
-    text-align: center;
-  }
+.finale {
+	display: none;
+}
 
-  .finale {
-    display: none;
-  }
-
-  .yourBest {
-    padding-bottom: 15px;
-  }
+.yourBest {
+	padding-bottom: 15px;
+}
 
 .finalLog {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  font-size: 28px;
-  border-bottom: 1px solid;
-  border-width: 100%;
-  margin: 10px 25px;
-  list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font-size: 28px;
+	border-bottom: 1px solid;
+	border-width: 100%;
+	margin: 10px 25px;
+	list-style-type: none;
 }
 
 #scores {
-  display: flex;
-  justify-content: space-evenly;
+	display: flex;
+	justify-content: space-evenly;
 }
 
 .yourScores {
-display: flex;
-flex: 0 0 50%;
+	display: flex;
+	flex: 0 0 50%;
 }
 
 .yourInitials {
-  display: flex;
-  
+	display: flex;
 }
 
 #giphy {
-    align-items: center;
-    margin: 0;
-    display: inline;
-    width: 160px;
-    height: 180px;
+	align-items: center;
+	margin: 0;
+	display: inline;
+	width: 160px;
+	height: 180px;
 }
 
 .time-left {
-    font-size: 25px;
-    font-weight: bolder;
-    color: blueviolet;
+	font-size: 25px;
+	font-weight: bolder;
+	color: blueviolet;
 }
 
 .score-keeper {
-    text-align: center;
-    margin: 10px, 200px;
-    font-size: 25px;
-    font-weight: bolder;
-    color: black;
+	text-align: center;
+	margin: 10px, 200px;
+	font-size: 25px;
+	font-weight: bolder;
+	color: black;
 }
 
 #learn {
-     font-size: 15px;
-     font-weight: bolder;
-
+	font-size: 15px;
+	font-weight: bolder;
 }
 
 #inner_circle {
-    text-align: center;
-    margin: 20px, 200px;
-    font-size: 100px;
-    font-weight: bolder;
-    color: white;
-    padding-left: 25px;
+	text-align: center;
+	margin: 20px, 200px;
+	font-size: 100px;
+	font-weight: bolder;
+	color: white;
+	padding-left: 25px;
 }
 
 #word {
-    font-size: 35px;
-    font-weight: bolder;
-    color:rgb(138, 44, 226);
-    
+	font-size: 35px;
+	font-weight: bolder;
+	color: rgb(138, 44, 226);
 }
 
 #countdown {
-    margin-left: 250px
+	margin-left: 250px;
 }
-.buttons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

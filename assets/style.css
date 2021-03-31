@@ -267,13 +267,20 @@
         border-radius: 10px;
         margin: 40px 20px;
 }
+#time-left {
+	margin-top: 2px;
+}
 
 .enter-box {
     display: flex;
     justify-content: center;
     align-content: flex-end;
+		margin-top: 15px;
 }
- 
+
+#spell {
+	width: 35%;
+}
 
 #score {
     font-size: 36px;

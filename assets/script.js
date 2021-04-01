@@ -36,6 +36,7 @@ let getWord = function () {
         document.getElementById("countdown").style.display = "block"
         document.getElementById("gamebox").style.display = "block"
 
+
         // 3 Second Timer
         time = 3;
 
@@ -53,6 +54,7 @@ let getWord = function () {
             document.getElementById("inner_circle").innerHTML = ""
             document.getElementById("countdown").style.display = "none"
             document.getElementById("time-left").style.display = "none"
+            document.getElementById("spell").autofocus;
 
             // Get Values
             word = data[0].word
@@ -123,9 +125,15 @@ document.getElementById("main-btn").onclick = function (event) {
 
 
     // IF  word was wrong
-  } else {
-    userScore -= 1; //downgrade score value with 1
+  } else  {
 
+
+    userScore -= 1; //downgrade score value with 1
+    console.log(userScore)
+    if (userScore < 0){
+      userScore = 0
+
+    }
     document.getElementById("yourScore").innerHTML = "Your Score: " + userScore
 
     let getX = document.getElementById("word")
@@ -144,11 +152,19 @@ document.getElementById("main-btn").onclick = function (event) {
         <p id="learn"> Pronunciation: ${pronunciation}</p>
         `
     grabDefinition.innerHTML = setDefinition
-  }
-
+ 
+  
 
 }
 
+}
+
+document.getElementById("end-game").onclick = function () {
+document.getElementById("gamebox").style.display = "none"
+document.getElementById("log").style.display = "block"
+
+document.getElementById("highScore").innerHTML = userScore
+}
 
 // save ganme sacore and present score
 function saveGame() {
@@ -165,14 +181,17 @@ function saveGame() {
 
 
   initials = document.getElementById("initials").value
+console.log(initials)
 
-
-
+if (initials <= 0){
+  window.alert("Must put in your Initials")
+  return;
+}
 
   let logScores = JSON.parse(localStorage.getItem("yourScores")) || [];
 
   // push to array and save
-  let numbers = { Score: highscore }
+  let numbers = {Initials: initials, Score: highscore }
   logScores.push(numbers)
   console.log(logScores)
 

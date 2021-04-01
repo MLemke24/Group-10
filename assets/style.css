@@ -406,3 +406,27 @@ html {
 	justify-content: center;
 	align-items: center;
 }
+
+#yourBest {
+  color: rgb(138, 44, 226);
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.yourInitials {
+color: rgb(138, 44, 226);
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.yourScores {
+	color: #2b86c5;
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+.finalLog {
+	color:  #ff3cac;
+}
+
+	

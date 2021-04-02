@@ -429,8 +429,14 @@ color: rgb(138, 44, 226);
 	color:  #ff3cac;
 }
 
+<<<<<<< HEAD
 .title h1 {
 	line-height: 1.5;
 
 }
 	
+=======
+.footer {
+	background: linear-gradient(280deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+}
+>>>>>>> 95608e6838a594c5b2fe92afd002eeb1d12e4243

@@ -2,11 +2,8 @@
 var save = document.querySelector(".save")
 var highscorePage = document.querySelector(".highscores")
 var log = document.querySelector(".finalLog")
-
 let word, definition, pronunciation, appear, time, createCircle
-
 let userScore = 0;
-
 let click = document.getElementById("action")
 
 // Next Button On Click
@@ -243,6 +240,10 @@ function highscores() {
 
 
 };
+
+document.getElementById("try").onclick = function() {
+  getWord()
+}
 
 
 // next.addEventListener("click", getWord)

@@ -243,6 +243,10 @@ html {
 }
 
 /* Div boxes and other stuff */
+
+.start-game {
+	height: 700px;
+}
 .yourScore {
 	margin-top: 0px;
 	margin-bottom: 0px;
@@ -429,3 +433,20 @@ color: rgb(138, 44, 226);
 	color:  #ff3cac;
 }
 
+/* Mobile Responsiveness */
+
+@media screen and (max-width: 980px){
+	nav {
+		max-width: 60%;
+	}
+	.navbar-end {
+		margin-left: 0;
+	}
+}
+@media screen and (max-width: 575px) {
+#action {
+	align-items: center;
+	margin-left: 15px;
+}
+
+}

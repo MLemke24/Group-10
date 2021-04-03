@@ -36,14 +36,16 @@ let getWord = function () {
 
         // 3 Second Timer
         time = 3;
-
+        document.getElementById("inner_circle").innerHTML = time + "&nbsp";
         timer = setInterval(function function1() {
-
-          document.getElementById("inner_circle").innerHTML = time + "&nbsp";
-          // console.log(time)
           time -= 1
 
-          if (time < 0) {
+          document.getElementById("inner_circle").innerHTML = time + "&nbsp";
+        
+          // console.log(time)
+          
+
+          if (time <= 0) {
 
             //  WORD APPEARS!
 

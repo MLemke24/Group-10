@@ -1,10 +1,31 @@
 # Group-10 
 
+## This Repository
+This repository contains a group project called "Nerd Words". 
+
+## Nerd Words
+![Image of Game Start Page]()
 
 
+## Languages Used
+* HTML 
+* CSS
+*Bulma
+* JavaScript
 
-## Purpose
-A brain excersie app intended on helping the user escape their daily routine for a fun and learning expereince. 
+## About This Project
+* When you click start a 3 second timer will begin
+* At the end of that timer, a word will pop up for 1 second. 
+* You must then use the input box to spell the word correclty. 
+* If you spell it right, you get a point
+* If you spell it wrong, you get a point taken away.
+
+
+##  Contact Me Here
+Matthew Lemke: Mattrlemke@gmail.com
+
+## Link To Deployed Application 
+[Link To Game](https://mlemke24.github.io/Group-10/)
 
 
 

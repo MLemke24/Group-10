@@ -4,13 +4,13 @@
 This repository contains a group project called "Nerd Words". 
 
 ## Nerd Words
-![Image of Game Start Page]()
+![Image of Game Start Page](https://github.com/MLemke24/Group-10/blob/main/assets/screencapture-mlemke24-github-io-Group-10-2021-04-04-07_27_57%20(2).png)
 
 
 ## Languages Used
 * HTML 
 * CSS
-*Bulma
+* Bulma
 * JavaScript
 
 ## About This Project

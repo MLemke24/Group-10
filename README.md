@@ -21,9 +21,6 @@ This repository contains a group project called "Nerd Words".
 * If you spell it wrong, you get a point taken away.
 
 
-##  Contact Me Here
-Matthew Lemke: Mattrlemke@gmail.com
-
 ## Link To Deployed Application 
 [Link To Game](https://mlemke24.github.io/Group-10/)
 
